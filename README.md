@@ -1,27 +1,29 @@
-# TestMaps
+# Notice: Its quick solution. There is could be a lot of optimizations (using workers, better memory management etc.) but due to time limits, i stay with MVP version.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+## Description
 
-## Development server
+Create a hexagons view for data that in data.json.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+data.json contains coordinates and color in which hexagon should be colored.
 
-## Code scaffolding
+Coordinates in EPSG:3857 system and should be converted to EPSG:4326 system.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Map: openstreetmap, google map or etc. (doesn't matter which one)
+- Hexagon size should change depending on zoom level, lower zoom bigger hexagon
+- For hexagon color use property COLOR_HEX from data.json
+- Hexagons should be shown only for screen area
+- Results of development please send as git repo link with instraction how to start it
 
-## Build
+## Useful links
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+https://github.com/proj4js/proj4js
 
-## Running unit tests
+https://github.com/uber/geojson2h3
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+https://github.com/uber/h3-js
 
-## Running end-to-end tests
+Result should looks like that
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<img width="1383" alt="Screenshot 2024-10-01 at 15 22 56" src="https://github.com/user-attachments/assets/f0433983-19ab-44fb-a055-773563d55e30">
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<img width="926" alt="Screenshot 2024-10-01 at 15 22 38" src="https://github.com/user-attachments/assets/9021a6cd-025c-4a9a-8038-e907f1b39c6c">
